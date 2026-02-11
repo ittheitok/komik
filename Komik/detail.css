@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.back {
+    position: absolute;
+    left: 20px;
+    top: 22px;
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.back:hover {
+    color: #000;
+}
+
+/* Layout */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.comic-detail {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
+/* Cover */
+.comic-cover img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Info */
+.comic-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.meta {
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.genre {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Info grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.info-grid strong {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.info-grid p {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Button */
+.read-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.read-btn:hover {
+    background: #222;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .comic-detail {
+        grid-template-columns: 1fr;
+    }
+
+    .comic-cover {
+        text-align: center;
+    }
+
+    .comic-cover img {
+        max-width: 250px;
+    }
+}
+
+
+/* Chapter card grid */
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.chapter-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chapter-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.chapter-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+}
+
+.chapter-content {
+    padding: 14px;
+}
+
+.chapter-number {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.chapter-content h4 {
+    font-size: 1rem;
+    margin: 6px 0 12px;
+}
+
+.chapter-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.chapter-btn:hover {
+    background: #222;
+}
